@@ -332,7 +332,6 @@ data:
           - {{ . | squote }}
           {{- end }}
         {{- end }}
-      {{- end -}}
       {{- with $rule.policy }}
         policy: {{ . }}
       {{- end -}}
