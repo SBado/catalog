@@ -324,6 +324,7 @@ data:
           {{- end }}
         {{- end }}
       {{- end -}}
+      {{- if $rule.domain_regex }}
         domain_regex:
         {{- if kindIs "string" $rule.domain_regex }}
           - {{ $rule.domain_regex | squote }}
@@ -332,6 +333,7 @@ data:
           - {{ . | squote }}
           {{- end }}
         {{- end }}
+      {{- end }}
       {{- with $rule.policy }}
         policy: {{ . }}
       {{- end -}}
