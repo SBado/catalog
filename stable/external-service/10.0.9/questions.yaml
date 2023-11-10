@@ -306,6 +306,11 @@ questions:
                                     type: int
                                     $ref:
                                       - "definitions/certificate"
+                    - variable: allowCors
+                      label: "Allow Cross Origin Requests"
+                      schema:
+                        type: boolean
+                        default: false
   - variable: ingressList
     label: Add Manual Custom Ingresses
     group: Ingress
