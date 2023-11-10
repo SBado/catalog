@@ -1,0 +1,25 @@
+image:
+  repository: tccr.io/truecharts/medusa
+  pullPolicy: IfNotPresent
+  tag: v1.0.18@sha256:3e77437b61d42b2c0f40dd4f4ecea5e7777e8cc3c936cd12f70737b8a993f046
+service:
+  main:
+    ports:
+      main:
+        port: 10068
+        targetPort: 8081
+persistence:
+  config:
+    enabled: true
+    mountPath: "/config"
+  varrun:
+    enabled: true
+portal:
+  open:
+    enabled: true
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
